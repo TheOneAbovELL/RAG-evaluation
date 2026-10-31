@@ -1,8 +1,23 @@
 # RAG Evaluation Workbench
 
-**Measure a retrieval-augmented question-answering (RAG) pipeline honestly: run it over a dataset, inspect every answer beside the exact context it saw, and compare runs with paired statistics. Works fully offline, or with an OpenAI-compatible provider when you want LLM judges.**
+<div align="center">
 
-`Version 1.4.1` · `Python 3.12+` · `MIT License` · `Streamlit UI + ragwb CLI + SQLite Store`
+### 🔬 Reproducible RAG Evaluation & Statistical Analysis
+
+**A comprehensive evaluation workbench for retrieval-augmented question-answering systems.**
+
+Measure what RAG pipelines actually retrieve and generate, not just what they claim. RAG Evaluation Workbench executes pipelines against structured datasets, captures the exact retrieved context, evaluates answers using lexical, semantic, and LLM-as-a-judge metrics, and compares experiments using paired statistics and bootstrap confidence intervals. Supports fully offline evaluation and OpenAI-compatible providers.
+
+[![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Web%20Interface-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![SQLite](https://img.shields.io/badge/SQLite-Run%20Storage-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![DeepEval](https://img.shields.io/badge/DeepEval-LLM%20Evaluation-6C47FF)](https://github.com/confident-ai/deepeval)
+[![pytest](https://img.shields.io/badge/pytest-Testing-0A9EDC?logo=pytest&logoColor=white)](https://pytest.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+[Quick Start](#-quick-start) · [Architecture](#-architecture) · [Retrieval & Metrics](#-retrieval-and-evaluation-metrics) · [CLI](#-command-line-interface) · [Testing](#-testing-and-verification) · [Documentation](#-documentation)
+
+</div>
 
 ---
 
