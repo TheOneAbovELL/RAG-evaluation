@@ -1,0 +1,57 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='980' height='360' viewBox='0 0 980 360' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13'>
+<title>Data flow of one evaluation run</title>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='980' height='360' fill='white'/>
+<text x='20' y='28' font-size='15' text-anchor='start' font-weight='600' fill='#212529'>Figure: data flow of one run</text>
+<rect x='20' y='60' width='170' height='60' rx='8' fill='#fff4e6' stroke='#495057' stroke-width='1.2'/>
+<text x='105.0' y='86.0' text-anchor='middle' font-weight='600'>Dataset</text>
+<text x='105.0' y='102.0' text-anchor='middle' font-size='11' fill='#495057'>.jsonl / .csv</text>
+<rect x='20' y='200' width='170' height='60' rx='8' fill='#fff4e6' stroke='#495057' stroke-width='1.2'/>
+<text x='105.0' y='226.0' text-anchor='middle' font-weight='600'>Document</text>
+<text x='105.0' y='242.0' text-anchor='middle' font-size='11' fill='#495057'>.pdf / .txt / .md</text>
+<rect x='240' y='60' width='160' height='60' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='320.0' y='86.0' text-anchor='middle' font-weight='600'>EvalCase[]</text>
+<text x='320.0' y='102.0' text-anchor='middle' font-size='11' fill='#495057'>validated, hashed</text>
+<rect x='240' y='200' width='160' height='60' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='320.0' y='226.0' text-anchor='middle' font-weight='600'>Chunk[]</text>
+<text x='320.0' y='242.0' text-anchor='middle' font-size='11' fill='#495057'>p{page}-b{n}</text>
+<rect x='450' y='200' width='160' height='60' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='530.0' y='226.0' text-anchor='middle' font-weight='600'>Retriever</text>
+<text x='530.0' y='242.0' text-anchor='middle' font-size='11' fill='#495057'>BM25 / embeddings</text>
+<rect x='450' y='60' width='160' height='60' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='530.0' y='86.0' text-anchor='middle' font-weight='600'>Generator</text>
+<text x='530.0' y='102.0' text-anchor='middle' font-size='11' fill='#495057'>extractive / GPT / agent</text>
+<rect x='660' y='60' width='150' height='60' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='735.0' y='86.0' text-anchor='middle' font-weight='600'>Generation</text>
+<text x='735.0' y='102.0' text-anchor='middle' font-size='11' fill='#495057'>answer + contexts</text>
+<rect x='660' y='200' width='150' height='60' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='735.0' y='226.0' text-anchor='middle' font-weight='600'>MetricResult[]</text>
+<text x='735.0' y='242.0' text-anchor='middle' font-size='11' fill='#495057'>ok / skipped / error</text>
+<rect x='850' y='60' width='110' height='60' rx='8' fill='#f3f0ff' stroke='#495057' stroke-width='1.2'/>
+<text x='905.0' y='86.0' text-anchor='middle' font-weight='600'>SQLite</text>
+<text x='905.0' y='102.0' text-anchor='middle' font-size='11' fill='#495057'>case rows</text>
+<rect x='850' y='200' width='110' height='60' rx='8' fill='#f3f0ff' stroke='#495057' stroke-width='1.2'/>
+<text x='905.0' y='226.0' text-anchor='middle' font-weight='600'>RunSummary</text>
+<text x='905.0' y='242.0' text-anchor='middle' font-size='11' fill='#495057'>means, CIs</text>
+<rect x='660' y='290' width='300' height='50' rx='8' fill='#f1f3f5' stroke='#495057' stroke-width='1.2'/>
+<text x='810.0' y='319.0' text-anchor='middle' font-weight='400'>UI tables &amp; charts · CSV · Markdown · JSON bundle</text>
+<line x1='190.0' y1='90.0' x2='240.0' y2='90.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='196.0' y='84.0' font-size='11' fill='#343a40'>parse</text>
+<line x1='190.0' y1='230.0' x2='240.0' y2='230.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='196.0' y='224.0' font-size='11' fill='#343a40'>extract</text>
+<line x1='400.0' y1='230.0' x2='450.0' y2='230.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='406.0' y='224.0' font-size='11' fill='#343a40'>index</text>
+<line x1='400.0' y1='90.0' x2='450.0' y2='90.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='406.0' y='84.0' font-size='11' fill='#343a40'>question</text>
+<line x1='530.0' y1='200.0' x2='530.0' y2='120.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='536.0' y='160.0' font-size='11' fill='#343a40'>top-k chunks</text>
+<line x1='610.0' y1='90.0' x2='660.0' y2='90.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<line x1='735.0' y1='120.0' x2='735.0' y2='200.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='741.0' y='160.0' font-size='11' fill='#343a40'>score</text>
+<line x1='810.0' y1='90.0' x2='850.0' y2='90.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='816.0' y='84.0' font-size='11' fill='#343a40'>commit</text>
+<line x1='810.0' y1='230.0' x2='850.0' y2='230.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='816.0' y='224.0' font-size='11' fill='#343a40'>aggregate</text>
+<line x1='871.4705882352941' y1='260.0' x2='837.9411764705883' y2='290.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<line x1='905.0' y1='120.0' x2='905.0' y2='200.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+</svg>

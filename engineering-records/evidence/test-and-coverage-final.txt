@@ -1,0 +1,37 @@
+........................................................................ [ 51%]
+....................................................................     [100%]Running teardown with pytest sessionfinish...
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.15-final-0 _______________
+Name                                    Stmts   Miss  Cover
+-----------------------------------------------------------
+src\rag_workbench\__init__.py               4      0   100%
+src\rag_workbench\__main__.py               3      3     0%
+src\rag_workbench\aggregate.py             74      0   100%
+src\rag_workbench\archive.py               55      3    95%
+src\rag_workbench\cli.py                  192     11    94%
+src\rag_workbench\config.py                87      2    98%
+src\rag_workbench\datasets.py             150      4    97%
+src\rag_workbench\demo.py                  13      0   100%
+src\rag_workbench\documents.py             78      2    97%
+src\rag_workbench\errors.py                17      1    94%
+src\rag_workbench\logging_setup.py         50      3    94%
+src\rag_workbench\metrics\__init__.py      27      0   100%
+src\rag_workbench\metrics\base.py          55      1    98%
+src\rag_workbench\metrics\judge.py         46      2    96%
+src\rag_workbench\metrics\lexical.py       64      2    97%
+src\rag_workbench\models.py               139      5    96%
+src\rag_workbench\pipeline.py              99      8    92%
+src\rag_workbench\prompts.py                7      0   100%
+src\rag_workbench\providers.py             65      2    97%
+src\rag_workbench\reporting.py            127      2    98%
+src\rag_workbench\retrieval.py             87      3    97%
+src\rag_workbench\runner.py               174      7    96%
+src\rag_workbench\services.py              56      2    96%
+src\rag_workbench\storage.py               84      0   100%
+src\rag_workbench\text.py                  38      0   100%
+src\rag_workbench\ui\__init__.py            0      0   100%
+src\rag_workbench\ui\components.py         53      3    94%
+src\rag_workbench\ui\state.py              28      4    86%
+-----------------------------------------------------------
+TOTAL                                    1872     70    96%
+140 passed in 38.37s

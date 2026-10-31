@@ -1,0 +1,50 @@
+........................................................................ [ 28%]
+.........................................................s.............. [ 56%]
+........................................................................ [ 85%]
+.....................................                                    [100%]Running teardown with pytest sessionfinish...
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.15-final-0 _______________
+
+Name                                    Stmts   Miss  Cover
+-----------------------------------------------------------
+src\rag_workbench\__init__.py               4      0   100%
+src\rag_workbench\__main__.py               3      3     0%
+src\rag_workbench\aggregate.py             99      0   100%
+src\rag_workbench\archive.py               55      3    95%
+src\rag_workbench\calibration.py          148      1    99%
+src\rag_workbench\cli.py                  313     16    95%
+src\rag_workbench\config.py               105      3    97%
+src\rag_workbench\datasets.py             150      4    97%
+src\rag_workbench\demo.py                  15      0   100%
+src\rag_workbench\documents.py             90      2    98%
+src\rag_workbench\errors.py                17      1    94%
+src\rag_workbench\logging_setup.py         68      9    87%
+src\rag_workbench\maintenance.py          167     16    90%
+src\rag_workbench\metrics\__init__.py      27      0   100%
+src\rag_workbench\metrics\base.py          58      1    98%
+src\rag_workbench\metrics\judge.py         67      2    97%
+src\rag_workbench\metrics\lexical.py       64      2    97%
+src\rag_workbench\models.py               145      5    97%
+src\rag_workbench\pipeline.py             104      8    92%
+src\rag_workbench\prompts.py                7      0   100%
+src\rag_workbench\providers.py             74      2    97%
+src\rag_workbench\reporting.py            129      2    98%
+src\rag_workbench\retrieval.py            109      3    97%
+src\rag_workbench\runner.py               191      8    96%
+src\rag_workbench\services.py              56      2    96%
+src\rag_workbench\storage.py               84      0   100%
+src\rag_workbench\text.py                  39      0   100%
+src\rag_workbench\ui\__init__.py            0      0   100%
+src\rag_workbench\ui\auth.py               62      0   100%
+src\rag_workbench\ui\components.py         54      3    94%
+src\rag_workbench\ui\state.py              28      4    86%
+-----------------------------------------------------------
+TOTAL                                    2532    100    96%
+Test tests/test_live.py::test_live_smoke_script_passes was skipped. Reason: 
+('C:\\Users\\omjee\\OneDrive\\Desktop\\PROJECTS\\RAG 
+Evaluation\\rag-evaluation-workbench\\tests\\test_live.py', 26, 'Skipped: set 
+RAGWB_LIVE_TESTS=1 and OPENAI_API_KEY to run paid live tests')
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_live.py:26: set RAGWB_LIVE_TESTS=1 and OPENAI_API_KEY to run paid live tests
+252 passed, 1 skipped in 132.68s (0:02:12)

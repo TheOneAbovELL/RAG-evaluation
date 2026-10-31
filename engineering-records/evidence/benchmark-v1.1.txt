@@ -1,0 +1,11 @@
+scripts/benchmark.py, offline path, 2026-10-28, one Windows 11 laptop, Python 3.12.15 (relative numbers only)
+
+ cases workers     status    run s  cases/s  read s  csv s  peak MB  db MB
+   200       1  completed     3.11     64.4    0.01   0.09      2.4    0.9
+  1000       1  completed    19.46     51.4    0.06   0.04     10.9    4.2
+  5000       1  completed   108.97     45.9    0.56   0.32     53.9   20.8
+  1000       4  completed    28.33     35.3    0.13   0.15     11.0    4.2
+
+Reading: throughput is flat with size (no super-linear cost in storage or bootstrap). Four workers were slower than
+one for this CPU-bound offline work (GIL plus SQLite writes); workers help only when cases wait on the network.
+Peak memory is tracemalloc (Python allocations only).

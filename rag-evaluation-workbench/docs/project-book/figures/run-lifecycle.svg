@@ -1,0 +1,41 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='330' viewBox='0 0 900 330' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13'>
+<title>Run status lifecycle</title>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='900' height='330' fill='white'/>
+<text x='20' y='28' font-size='15' text-anchor='start' font-weight='600' fill='#212529'>Figure: run status lifecycle (storage.runs.status)</text>
+<rect x='30' y='130' width='150' height='55' rx='8' fill='#f1f3f5' stroke='#495057' stroke-width='1.2'/>
+<text x='105.0' y='145.5' text-anchor='middle' font-weight='600'>prepare()</text>
+<text x='105.0' y='161.5' text-anchor='middle' font-size='11' fill='#495057'>validation only</text>
+<text x='105.0' y='177.5' text-anchor='middle' font-size='11' fill='#495057'>no row written</text>
+<rect x='240' y='130' width='140' height='55' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='310.0' y='161.5' text-anchor='middle' font-weight='600'>running</text>
+<rect x='470' y='40' width='140' height='45' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='540.0' y='58.5' text-anchor='middle' font-weight='600'>completed</text>
+<text x='540.0' y='74.5' text-anchor='middle' font-size='11' fill='#495057'>no case errors</text>
+<rect x='470' y='100' width='140' height='45' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='540.0' y='118.5' text-anchor='middle' font-weight='600'>partial</text>
+<text x='540.0' y='134.5' text-anchor='middle' font-size='11' fill='#495057'>some case errors</text>
+<rect x='470' y='160' width='140' height='45' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='540.0' y='178.5' text-anchor='middle' font-weight='600'>failed</text>
+<text x='540.0' y='194.5' text-anchor='middle' font-size='11' fill='#495057'>every case errored</text>
+<rect x='470' y='220' width='140' height='45' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='540.0' y='238.5' text-anchor='middle' font-weight='600'>cancelled</text>
+<text x='540.0' y='254.5' text-anchor='middle' font-size='11' fill='#495057'>cancel / Stop / Ctrl-C</text>
+<rect x='700' y='200' width='170' height='55' rx='8' fill='#e6fcf5' stroke='#495057' stroke-width='1.2'/>
+<text x='785.0' y='215.5' text-anchor='middle' font-weight='600'>interrupted</text>
+<text x='785.0' y='231.5' text-anchor='middle' font-size='11' fill='#495057'>process died; set on</text>
+<text x='785.0' y='247.5' text-anchor='middle' font-size='11' fill='#495057'>next start-up</text>
+<rect x='700' y='40' width='170' height='50' rx='8' fill='#f3f0ff' stroke='#495057' stroke-width='1.2'/>
+<text x='785.0' y='53.0' text-anchor='middle' font-weight='600'>imported</text>
+<text x='785.0' y='69.0' text-anchor='middle' font-size='11' fill='#495057'>loaded from a bundle</text>
+<text x='785.0' y='85.0' text-anchor='middle' font-size='11' fill='#495057'>(no run executed)</text>
+<line x1='180.0' y1='157.5' x2='240.0' y2='157.5' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<text x='186.0' y='151.5' font-size='11' fill='#343a40'>create row</text>
+<line x1='376.57894736842104' y1='130.0' x2='485.5263157894737' y2='85.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<line x1='380.0' y1='146.84782608695653' x2='470.0' y2='133.15217391304347' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<line x1='380.0' y1='165.1086956521739' x2='470.0' y2='174.8913043478261' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<line x1='380.0' y1='183.3695652173913' x2='479.11764705882354' y2='220.0' stroke='#495057' stroke-width='1.3' marker-end='url(#arrow)'/>
+<path d='M310,185 V292 H785 V255' fill='none' stroke='#495057' stroke-width='1.3' stroke-dasharray='5,4' marker-end='url(#arrow)'/>
+<text x='470' y='286' font-size='11' text-anchor='start' font-weight='400' fill='#212529'>still &#x27;running&#x27; at start-up → recover_interrupted()</text>
+<text x='30' y='318' font-size='12' text-anchor='start' font-weight='400' fill='#495057'>Errors in prepare() (bad dataset, document, metric or key) raise before any row exists.</text>
+</svg>

@@ -1,0 +1,38 @@
+﻿case_id,question,expected_answer,answer,token_f1_score,context_recall_score,groundedness_score,correctness_score,human_pass,note
+v01,What is molten rock called once it has reached the surface in an eruption?,Once erupted it is known as lava.,"Based on passage [1], molten rock is called **lava** once it has erupted.",0.500,1.000,0.625,1.000,,
+v02,What name is given to molten rock that is still underground?,"Underground, the molten rock is called magma.",Magma,0.286,1.000,1.000,0.800,,
+v03,Why does rock melt above a subduction zone?,"The sinking plate gives off water, and that water helps the rock above it to melt.","According to passage [1], rock melts above a subduction zone because one plate sinks beneath another and releases water, which helps the rock above it melt.",0.474,0.714,0.800,1.000,,
+v04,What happens at a spreading ridge?,"Plates pull apart and magma rises into the gap, making fresh crust on the sea floor.","At spreading ridges, plates move apart and magma rises to fill the gap, which creates new crust on the ocean floor.",0.545,0.636,1.000,1.000,,
+v05,"In a chain of hotspot islands, which island lies over the hotspot?","The youngest island, since the older ones have been carried away by the moving plate.",The youngest island sits above the hotspot.,0.235,0.667,1.000,0.200,,
+v06,What was the deadliest volcanic eruption in history?,The PDF does not provide enough information to answer the question.,The PDF does not provide enough information to answer the question.,1.000,,,1.000,,
+v07,What makes a chain of islands appear in the middle of an ocean far from any plate edge?,"A plate slides slowly over a long-lived plume of very hot rock, building one island after another.","Based on passage [2], a chain of islands appears in the middle of an ocean far from any plate edge due to **hotspots**, which are long-lived plumes of unusually hot rock rising from deep inside the planet. As a tectonic plate drifts slowly over a stationary hotspot, a chain of volcanic islands forms, with the youngest island located above the hotspot and the oldest ones carried farthest away.",0.219,0.833,0.778,1.000,,
+v08,Which kinds of volcano does the text describe?,"It describes shield volcanoes, stratovolcanoes (composite volcanoes) and cinder cones.","The text describes three kinds of volcanoes based on how recently they have erupted:
+
+1.  **Active volcano**: Has erupted in recent history or is showing signs of unrest.
+2.  **Dormant volcano**: Quiet at present but could erupt again.
+3.  **Extinct volcano**: Not expected to erupt any more.",0.071,0.143,0.667,0.000,,
+v09,What kind of lava builds a shield volcano?,"Fluid lava that travels far, which gives the volcano broad, gently sloping sides.",Runny lava builds a shield volcano.,0.235,0.300,1.000,0.700,,
+v10,"Why can thick, sticky magma lead to violent explosions?","It holds gas in, so pressure rises until the volcano bursts apart.","Thick, sticky magma traps gas, causing pressure to build until the volcano blows apart in a violent explosion.",0.444,0.571,0.923,1.000,,
+v11,Which gases do volcanoes give off?,"They release water vapour, carbon dioxide and sulfur dioxide.","Based on passage [3], volcanoes emit gases such as **water vapour, carbon dioxide, and sulfur dioxide**.",0.560,1.000,0.727,1.000,,
+v12,How tall is Olympus Mons?,The PDF does not provide enough information to answer the question.,The PDF does not provide enough information to answer the question.,1.000,,,1.000,,
+v13,Why is volcanic ash a hazard for aircraft?,Its tiny pieces of rock and glass drift far downwind and can harm jet engines.,Volcanic ash is a hazard for aircraft because it can damage aircraft engines.,0.148,0.600,1.000,0.700,,
+v14,What does pahoehoe lava look like?,It has a smooth surface that looks like rope.,"Pahoehoe lava has a smooth, ropy surface.",0.429,0.400,1.000,1.000,,
+v15,How does pillow lava form?,Lava that enters the sea or erupts underwater cools fast and forms rounded blobs.,"Pillow lava forms when lava flows into the sea or erupts underwater, causing it to cool quickly and form rounded blobs.",0.545,0.700,0.833,1.000,,
+v16,How is a caldera created?,"The volcano drains its magma chamber and the ground above falls in, leaving a large bowl-shaped hollow.",A caldera is created when a volcano empties its magma chamber and the ground above collapses.,0.519,0.636,1.000,1.000,,
+v17,Which lake in Oregon fills a caldera?,Crater Lake.,Crater Lake,1.000,1.000,1.000,1.000,,
+v18,How many active volcanoes are there on Earth today?,The PDF does not provide enough information to answer the question.,The PDF does not provide enough information to answer the question.,1.000,,,1.000,,
+v19,What categories do volcanologists use for how recently a volcano has erupted?,"Active, dormant and extinct.","Volcanologists classify volcanoes into three categories based on how recently they have erupted: active, dormant, and extinct.",0.381,1.000,0.727,1.000,,
+v20,How many activity categories are used for classifying volcanoes?,There are three of them.,The PDF does not provide enough information to answer the question.,0.000,0.000,,0.000,,
+v21,"Why are the active, dormant and extinct labels not always certain?",Some volcanoes have become active again after being silent for a very long time.,Because some volcanoes have woken after very long periods of silence.,0.500,0.500,1.000,1.000,,
+v22,Which warning signs help scientists predict an eruption?,"More small earthquakes, a swelling ground surface and changes in the amount or kind of gas coming out.","Based on passage [1], the warning signs that help scientists predict an eruption include:
+*   An increase in small earthquakes as magma moves upward.
+*   The ground swelling as pressure builds.
+*   Changes in the amount and type of gas escaping from vents.",0.392,0.600,0.769,1.000,,
+v23,Why are the soils around old eruption sites good for growing crops?,"Broken-down ash and lava turn into rich, fertile soil.",The PDF does not provide enough information to answer the question.,0.000,0.429,,0.000,,
+v24,How hot is lava when it erupts from a volcano?,The PDF does not provide enough information to answer the question.,The PDF does not provide enough information to answer the question.,1.000,,,1.000,,
+v25,What is hot rock near the surface used for?,It provides geothermal energy for heating and for making electricity.,Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity.,0.538,0.667,1.000,0.900,,
+v26,How can a huge blast from a fire mountain temporarily lower global temperatures?,Sulfur dioxide forms droplets in the upper air that bounce sunlight back to space.,The PDF does not provide enough information to answer the question.,0.091,0.100,,0.000,,
+v27,How long can the cooling effect of a big eruption last?,"About a year or two, after which it fades.",The cooling effect can last for a year or two.,0.375,1.000,0.600,0.900,,
+v28,Which moon is the most volcanically active body known?,Jupiter's moon Io.,Jupiter's moon Io is the most volcanically active body known.,0.500,1.000,1.000,0.900,,
+v29,On which planet is the giant shield volcano Olympus Mons?,It is on Mars.,Olympus Mons is on Mars.,0.667,1.000,1.000,1.000,,
+v30,What is the Volcanic Explosivity Index used for?,The PDF does not provide enough information to answer the question.,The PDF does not provide enough information to answer the question.,1.000,,,1.000,,

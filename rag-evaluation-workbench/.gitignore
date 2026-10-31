@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local runtime data (run store, uploads, exports, logs)
+data/
+
+# Python / tooling
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+.coverage
+htmlcov/
+# DeepEval creates an (empty) cache folder in the working directory when imported
+.deepeval/
+build/
+dist/
+*.egg-info/
+
+# Generated documentation builds (the Markdown sources and PDF are kept)
+docs/project-book/build/
+docs/user-guide/build/

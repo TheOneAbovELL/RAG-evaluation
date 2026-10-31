@@ -1,0 +1,6 @@
+id,question,expected_answer,topic
+p1,What tells other bees how far away the food is?,The length of the waggle run shows the distance to the food.,communication
+p2,Why do bees fan nectar with their wings?,Fanning evaporates water so the nectar thickens into honey.,honey
+p3,What do the oldest worker bees do?,They become foragers that gather resources outside the hive.,workers
+p4,What happens when a hive becomes overcrowded?,The colony swarms: new queens are raised and the old queen leaves with part of the workers.,reproduction
+p5,Which crops depend on honeybees?,"Many fruit, nut and seed crops rely on honeybee pollination.",pollination

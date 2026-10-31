@@ -1,0 +1,21 @@
+# Local-only Streamlit settings for the RAG Evaluation Workbench.
+
+[browser]
+# Do not send Streamlit usage statistics.
+gatherUsageStats = false
+
+[client]
+# "minimal" hides developer/deploy controls; this project is not deployed from the UI.
+toolbarMode = "minimal"
+
+[server]
+# Upload ceiling in MB, matching the default document limit (RAGWB_MAX_DOCUMENT_BYTES, 25 MB).
+# Datasets are additionally limited to 5 MB by the application.
+maxUploadSize = 25
+headless = true
+# Local tool without authentication: listen on this machine only.
+address = "localhost"
+
+[theme]
+# No base: follows the viewer's light/dark preference.
+primaryColor = "#3b5bdb"

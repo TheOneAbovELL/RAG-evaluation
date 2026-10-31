@@ -1,0 +1,2582 @@
+{
+  "format": "rag-workbench-run",
+  "version": 1,
+  "run": {
+    "id": "20261028-035657-qwen-volcanoes-30-b-7d604e",
+    "name": "qwen-volcanoes-30-b",
+    "status": "completed",
+    "created_at": "2026-10-28T03:56:57.978327Z",
+    "finished_at": "2026-10-28T04:40:54.447985Z",
+    "config": {
+      "started_by": null,
+      "name": "qwen-volcanoes-30-b",
+      "dataset_path": "examples/datasets/volcanoes.jsonl",
+      "document_path": "examples/documents/volcanoes.pdf",
+      "provider": "openai",
+      "pipeline": "rag",
+      "retriever": "bm25",
+      "k": 3,
+      "metrics": [
+        "token_f1",
+        "context_recall",
+        "groundedness",
+        "correctness"
+      ],
+      "thresholds": {
+        "token_f1": 0.5,
+        "context_recall": 0.7,
+        "groundedness": 0.7,
+        "correctness": 0.7
+      },
+      "generator_model": "qwen/qwen3.8-27b",
+      "embedding_model": null,
+      "judge_model": "qwen/qwen3.8-27b",
+      "max_workers": 1,
+      "max_retries": 4,
+      "request_timeout_s": 90.0,
+      "case_timeout_s": 600.0,
+      "max_answer_sentences": 2,
+      "min_evidence": 0.0,
+      "skip_headings": false,
+      "limit": null,
+      "notes": "Re-run of 20261028-032145-qwen-volcanoes-30-afb67d",
+      "offline_failure_rate": 0.0,
+      "seed": 0,
+      "prices_usd_per_mtok": {
+        "input": null,
+        "output": null
+      }
+    },
+    "dataset_sha256": "0665e1e6e122ebe5f890d8656c6e8aa3a633c3eed7ffed4a87cf9de4226d12ff",
+    "document_sha256": "a795f4262cb5cd302ebdc98aed7b6e6f2afbb1ba82e4edd60ff81468bde6c519",
+    "n_cases": 30,
+    "summary": {
+      "n_cases": 30,
+      "n_ok": 30,
+      "n_error": 0,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "n_scored": 30,
+          "n_skipped": 0,
+          "n_error": 0,
+          "mean": 0.48851105184938254,
+          "median": 0.48684210526315785,
+          "std": 0.3120249276113658,
+          "min": 0.0,
+          "max": 1.0,
+          "ci_low": 0.380881922987377,
+          "ci_high": 0.599701735434803,
+          "threshold": 0.5,
+          "n_passed": 14,
+          "pass_rate": 0.4666666666666667
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "n_scored": 25,
+          "n_skipped": 5,
+          "n_error": 0,
+          "mean": 0.6598614718614718,
+          "median": 0.6666666666666666,
+          "std": 0.3074517552977585,
+          "min": 0.0,
+          "max": 1.0,
+          "ci_low": 0.5394805194805194,
+          "ci_high": 0.7736969696969698,
+          "threshold": 0.7,
+          "n_passed": 11,
+          "pass_rate": 0.44
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "n_scored": 22,
+          "n_skipped": 8,
+          "n_error": 0,
+          "mean": 0.8840741329377693,
+          "median": 1.0,
+          "std": 0.14494248231282256,
+          "min": 0.6,
+          "max": 1.0,
+          "ci_low": 0.8191265804902169,
+          "ci_high": 0.9397400579218761,
+          "threshold": 0.7,
+          "n_passed": 19,
+          "pass_rate": 0.8636363636363636
+        },
+        "correctness": {
+          "name": "correctness",
+          "n_scored": 30,
+          "n_skipped": 0,
+          "n_error": 0,
+          "mean": 0.8033333333333333,
+          "median": 1.0,
+          "std": 0.35862124226305786,
+          "min": 0.0,
+          "max": 1.0,
+          "ci_low": 0.6633333333333333,
+          "ci_high": 0.92,
+          "threshold": 0.7,
+          "n_passed": 25,
+          "pass_rate": 0.8333333333333334
+        }
+      },
+      "mean_latency_ms": 535.3795333333334,
+      "p95_latency_ms": 1046.7628000000004,
+      "total_prompt_tokens": 9053,
+      "total_completion_tokens": 639,
+      "total_cost_usd": null,
+      "total_judge_cost_usd": null
+    },
+    "environment": {
+      "rag_workbench": "1.2.0",
+      "python": "3.12.15",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "packages": {
+        "deepeval": "4.3.1",
+        "langchain": "1.4.7",
+        "langchain-openai": "1.7.2",
+        "openai": "3.37.0",
+        "pymupdf": "1.28.2",
+        "streamlit": "1.66.1",
+        "pydantic": "2.14.1"
+      }
+    },
+    "notes": "Re-run of 20261028-032145-qwen-volcanoes-30-afb67d",
+    "tags": []
+  },
+  "cases": [
+    {
+      "case_id": "v01",
+      "position": 1,
+      "question": "What is molten rock called once it has reached the surface in an eruption?",
+      "expected_answer": "Once erupted it is known as lava.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "easy",
+        "topic": "definition"
+      },
+      "answer": "Based on passage [1], molten rock is called **lava** once it has erupted.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 8.623697,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 2.16503,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p2-b4",
+          "text": "Volcanoes are not unique to Earth. Olympus Mons on Mars is a giant shield volcano and one of the largest known volcanoes in the solar system. Jupiter's moon Io is the most volcanically active body known, with eruptions that throw sulfur-rich material high above its surface.",
+          "page": 2,
+          "score": 2.100285,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 665.809,
+      "prompt_tokens": 310,
+      "completion_tokens": 20,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.5,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 0.38, recall 0.71 (5 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "3/3 reference terms found in context",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.625,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "5/8 answer terms found in context; unsupported: 1, based, passage",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately conveys the core factual claim present in the Expected Output, which is that molten rock is called lava after it has erupted. While the Actual Output adds context (referencing 'passage [1]' and the term 'molten rock'), it does not contradict or omit the essential information found in the Expected Output. The alignment is strong regarding the specific fact requested.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v02",
+      "position": 2,
+      "question": "What name is given to molten rock that is still underground?",
+      "expected_answer": "Underground, the molten rock is called magma.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "easy",
+        "topic": "definition"
+      },
+      "answer": "Magma",
+      "contexts": [
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 7.826488,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b7",
+          "text": "Eruptions release much more than lava. Ash is made of tiny fragments of rock and glass that can be carried far downwind and can damage aircraft engines. Pyroclastic flows are fast, hot avalanches of gas and volcanic debris that race down a volcano's slopes. Volcanoes also emit gases such as water vapour, carbon dioxide and sulfur dioxide.",
+          "page": 1,
+          "score": 1.002827,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 0.989537,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 300.897,
+      "prompt_tokens": 323,
+      "completion_tokens": 3,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.2857142857142857,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 1.00, recall 0.17 (1 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "5/5 reference terms found in context",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "1/1 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.8,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output correctly identifies the key term 'Magma' which is the core factual claim in the Expected Output. While it omits the contextual detail about being 'underground' and the definition of 'molten rock', it does not contain any contradictions or hallucinations. It aligns with the primary fact required.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v03",
+      "position": 3,
+      "question": "Why does rock melt above a subduction zone?",
+      "expected_answer": "The sinking plate gives off water, and that water helps the rock above it to melt.",
+      "status": "ok",
+      "metadata": {
+        "type": "why",
+        "difficulty": "medium",
+        "topic": "plate boundaries"
+      },
+      "answer": "According to passage [1], rock melts above a subduction zone because one plate sinks beneath another and releases water, which helps the rock above it melt.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b3",
+          "text": "Most volcanoes form near the edges of tectonic plates, the large slabs that make up Earth's outer shell. At subduction zones, one plate sinks beneath another and releases water that helps the rock above it melt. At spreading ridges, plates move apart and magma rises to fill the gap, which creates new crust on the ocean floor.",
+          "page": 1,
+          "score": 7.471164,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 1.830141,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b7",
+          "text": "Eruptions release much more than lava. Ash is made of tiny fragments of rock and glass that can be carried far downwind and can damage aircraft engines. Pyroclastic flows are fast, hot avalanches of gas and volcanic debris that race down a volcano's slopes. Volcanoes also emit gases such as water vapour, carbon dioxide and sulfur dioxide.",
+          "page": 1,
+          "score": 1.002827,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 532.993,
+      "prompt_tokens": 324,
+      "completion_tokens": 32,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.4736842105263159,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.38, recall 0.64 (9 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.7142857142857143,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "5/7 reference terms found in context; missing: give, sinking",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.8,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "12/15 answer terms found in context; unsupported: 1, according, passage",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately captures the core factual claims of the Expected Output: that the sinking plate releases water and this water facilitates the melting of the rock above. While the Actual Output adds context about the subduction zone and cites a passage, it does not contradict or omit the specific mechanism described in the Expected Output.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v04",
+      "position": 4,
+      "question": "What happens at a spreading ridge?",
+      "expected_answer": "Plates pull apart and magma rises into the gap, making fresh crust on the sea floor.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "plate boundaries"
+      },
+      "answer": "At spreading ridges, plates move apart and magma rises to fill the gap, which creates new crust on the ocean floor.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b3",
+          "text": "Most volcanoes form near the edges of tectonic plates, the large slabs that make up Earth's outer shell. At subduction zones, one plate sinks beneath another and releases water that helps the rock above it melt. At spreading ridges, plates move apart and magma rises to fill the gap, which creates new crust on the ocean floor.",
+          "page": 1,
+          "score": 4.329713,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b1",
+          "text": "Volcanoes: Windows into a Restless Planet",
+          "page": 1,
+          "score": 0.0,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 0.0,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 501.162,
+      "prompt_tokens": 258,
+      "completion_tokens": 26,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.5454545454545454,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 0.47, recall 0.64 (9 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.6363636363636364,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "7/11 reference terms found in context; missing: fresh, making, pull, sea",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "14/14 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately conveys the same factual claims as the Expected Output. It correctly identifies the process at spreading ridges where plates move apart, magma rises, and new crust is formed on the ocean floor. There are no contradictions, omissions, or hallucinations; the differences are merely stylistic (e.g., 'spreading ridges' vs. general context, 'ocean floor' vs. 'sea floor').",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v05",
+      "position": 5,
+      "question": "In a chain of hotspot islands, which island lies over the hotspot?",
+      "expected_answer": "The youngest island, since the older ones have been carried away by the moving plate.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "hard",
+        "topic": "hotspots"
+      },
+      "answer": "The youngest island sits above the hotspot.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b4",
+          "text": "Some volcanoes sit far from any plate boundary. These are usually linked to hotspots, long-lived plumes of unusually hot rock rising from deep inside the planet. As a plate drifts slowly over a hotspot, a chain of volcanic islands can form, with the youngest island sitting above the hotspot and the oldest ones carried farthest away. The Hawaiian Islands are a well-known example.",
+          "page": 1,
+          "score": 15.293898,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 3.440356,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b1",
+          "text": "Volcanoes: Windows into a Restless Planet",
+          "page": 1,
+          "score": 0.0,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 291.949,
+      "prompt_tokens": 274,
+      "completion_tokens": 9,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.23529411764705882,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.40, recall 0.17 (2 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.6666666666666666,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "6/9 reference terms found in context; missing: moving, older, since",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "4/4 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.2,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "The Actual Output is factually incorrect and contradicts the Expected Output. The Expected Output states that the youngest island is located away from the hotspot because older islands have been carried away by the moving plate, implying the youngest is near the hotspot but the phrasing 'sits above' in the Actual Output is ambiguous or incorrect depending on the specific geological context (usually 'over' or 'near'). More critically, the Actual Output omits the crucial causal explanation provided in the Expected Output regarding the movement of the plate and the age distribution of the islands. The Actual Output's claim that the youngest island 'sits above the hotspot' is a simplification that misses the dynamic process described in the Expected Output, and potentially misrepresents the spatial relationship if 'above' implies a static position rather than the active volcanic site. However, the primary failure is the omission of the reasoning (plate movement) and the potential inaccuracy of the spatial description compared to the standard model where the youngest is *at* the hotspot, not necessarily 'above' it in a way that distinguishes it from the others without the context of plate motion.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v06",
+      "position": 6,
+      "question": "What was the deadliest volcanic eruption in history?",
+      "expected_answer": "The PDF does not provide enough information to answer the question.",
+      "status": "ok",
+      "metadata": {
+        "type": "unanswerable",
+        "difficulty": "hard",
+        "topic": "eruption products"
+      },
+      "answer": "The PDF does not provide enough information to answer the question.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 2.426375,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b10",
+          "text": "Volcanologists classify volcanoes by how recently they have erupted. An active volcano has erupted in recent history or is showing signs of unrest. A dormant volcano is quiet at present but could erupt again, while an extinct volcano is not expected to erupt any more. These labels are not always certain, because some volcanoes have woken after very long periods of silence.",
+          "page": 1,
+          "score": 2.417837,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b7",
+          "text": "Eruptions release much more than lava. Ash is made of tiny fragments of rock and glass that can be carried far downwind and can damage aircraft engines. Pyroclastic flows are fast, hot avalanches of gas and volcanic debris that race down a volcano's slopes. Volcanoes also emit gases such as water vapour, carbon dioxide and sulfur dioxide.",
+          "page": 1,
+          "score": 2.138849,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 301.696,
+      "prompt_tokens": 328,
+      "completion_tokens": 13,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 1.00, recall 1.00 (9 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "reference answer is an abstention (unanswerable case)",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "answer abstained; nothing to ground",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output is identical to the Expected Output, correctly stating that the PDF does not provide enough information to answer the question. There are no contradictions, omissions, or hallucinations.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v07",
+      "position": 7,
+      "question": "What makes a chain of islands appear in the middle of an ocean far from any plate edge?",
+      "expected_answer": "A plate slides slowly over a long-lived plume of very hot rock, building one island after another.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "hotspots",
+        "style": "paraphrase"
+      },
+      "answer": "Based on passage [2], a chain of islands appears in the middle of an ocean far from any plate edge due to **hotspots**, which are long-lived plumes of unusually hot rock rising from deep inside the planet. As a tectonic plate drifts slowly over a stationary hotspot, a chain of volcanic islands forms, with the youngest island located above the hotspot and the oldest ones carried farthest away.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b3",
+          "text": "Most volcanoes form near the edges of tectonic plates, the large slabs that make up Earth's outer shell. At subduction zones, one plate sinks beneath another and releases water that helps the rock above it melt. At spreading ridges, plates move apart and magma rises to fill the gap, which creates new crust on the ocean floor.",
+          "page": 1,
+          "score": 9.435733,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b4",
+          "text": "Some volcanoes sit far from any plate boundary. These are usually linked to hotspots, long-lived plumes of unusually hot rock rising from deep inside the planet. As a plate drifts slowly over a hotspot, a chain of volcanic islands can form, with the youngest island sitting above the hotspot and the oldest ones carried farthest away. The Hawaiian Islands are a well-known example.",
+          "page": 1,
+          "score": 8.800829,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 1.720178,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 702.027,
+      "prompt_tokens": 340,
+      "completion_tokens": 84,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.21917808219178084,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.14, recall 0.53 (8 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.8333333333333334,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "10/12 reference terms found in context; missing: building, slide",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.7777777777777778,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "28/36 answer terms found in context; unsupported: 2, appear, based, due, located, middle, passage, stationary",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately captures the core mechanism described in the Expected Output: a tectonic plate moving over a long-lived plume of hot rock to form islands. It correctly identifies the 'hotspot' as the source and explains the sequential formation of islands as the plate drifts, which aligns with the 'building one island after another' concept in the Expected Output. While the Actual Output adds extra detail about the age of the islands, it contains no contradictions or hallucinations relative to the Expected Output.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v08",
+      "position": 8,
+      "question": "Which kinds of volcano does the text describe?",
+      "expected_answer": "It describes shield volcanoes, stratovolcanoes (composite volcanoes) and cinder cones.",
+      "status": "ok",
+      "metadata": {
+        "type": "list",
+        "difficulty": "easy",
+        "topic": "volcano shapes"
+      },
+      "answer": "The text describes three kinds of volcanoes based on how recently they have erupted:\n\n1.  **Active volcano**: Has erupted in recent history or is showing signs of unrest.\n2.  **Dormant volcano**: Quiet at present but could erupt again.\n3.  **Extinct volcano**: Not expected to erupt any more.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b10",
+          "text": "Volcanologists classify volcanoes by how recently they have erupted. An active volcano has erupted in recent history or is showing signs of unrest. A dormant volcano is quiet at present but could erupt again, while an extinct volcano is not expected to erupt any more. These labels are not always certain, because some volcanoes have woken after very long periods of silence.",
+          "page": 1,
+          "score": 1.519011,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b9",
+          "text": "A caldera is a large bowl-shaped depression that forms when a volcano empties its magma chamber and the ground above collapses. Calderas can be many kilometres across, and some later fill with water to become lakes. Crater Lake in Oregon sits in a caldera that formed after a huge eruption of an old volcano.",
+          "page": 1,
+          "score": 1.293002,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 0.947774,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 515.894,
+      "prompt_tokens": 316,
+      "completion_tokens": 71,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.07142857142857142,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.04, recall 0.20 (2 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.14285714285714285,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "1/7 reference terms found in context; missing: cinder, composite, cone, describe, shield, stratovolcanoe",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.6666666666666666,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "16/24 answer terms found in context; unsupported: 1, 2, 3, based, describe, kind, text, three",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.0,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "The Actual Output categorizes volcanoes by activity status (active, dormant, extinct), whereas the Expected Output categorizes them by physical structure (shield, stratovolcano, cinder cone). The Actual Output completely omits the specific structural types required by the Expected Output and instead provides a different classification scheme, resulting in a total factual mismatch regarding the specific data points requested.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v09",
+      "position": 9,
+      "question": "What kind of lava builds a shield volcano?",
+      "expected_answer": "Fluid lava that travels far, which gives the volcano broad, gently sloping sides.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "volcano shapes"
+      },
+      "answer": "Runny lava builds a shield volcano.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 3.880957,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b6",
+          "text": "The stickiness of magma, known as its viscosity, strongly affects how an eruption behaves. Runny magma lets gas escape easily, so it tends to flow out quietly as lava streams. Thick, sticky magma traps gas, and the pressure can build until the volcano blows apart in a violent explosion.",
+          "page": 1,
+          "score": 3.343714,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b5",
+          "text": "Volcanoes come in several shapes. Shield volcanoes have broad, gentle slopes built from runny lava that spreads over long distances. Stratovolcanoes, also called composite volcanoes, are steep and cone-shaped, and are made of alternating layers of lava and ash. Cinder cones are small, steep hills formed from fragments of lava thrown into the air.",
+          "page": 1,
+          "score": 3.158268,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 373.215,
+      "prompt_tokens": 310,
+      "completion_tokens": 9,
+      "cost_usd": null,
+      "attempts": 3,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.23529411764705882,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.40, recall 0.17 (2 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.3,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "3/10 reference terms found in context; missing: far, fluid, gently, give, side, sloping, travel",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "5/5 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.7,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output correctly identifies the volcano type (shield volcano) and the lava characteristic (runny/fluid), which aligns with the core concept in the Expected Output. However, it omits the specific descriptive details regarding the 'broad, gently sloping sides' and the fact that the lava 'travels far,' which are key components of the Expected Output's description. While not contradictory, it is less complete than the expected answer.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v10",
+      "position": 10,
+      "question": "Why can thick, sticky magma lead to violent explosions?",
+      "expected_answer": "It holds gas in, so pressure rises until the volcano bursts apart.",
+      "status": "ok",
+      "metadata": {
+        "type": "why",
+        "difficulty": "medium",
+        "topic": "magma viscosity"
+      },
+      "answer": "Thick, sticky magma traps gas, causing pressure to build until the volcano blows apart in a violent explosion.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b6",
+          "text": "The stickiness of magma, known as its viscosity, strongly affects how an eruption behaves. Runny magma lets gas escape easily, so it tends to flow out quietly as lava streams. Thick, sticky magma traps gas, and the pressure can build until the volcano blows apart in a violent explosion.",
+          "page": 1,
+          "score": 11.318467,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 1.123542,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b9",
+          "text": "A caldera is a large bowl-shaped depression that forms when a volcano empties its magma chamber and the ground above collapses. Calderas can be many kilometres across, and some later fill with water to become lakes. Crater Lake in Oregon sits in a caldera that formed after a huge eruption of an old volcano.",
+          "page": 1,
+          "score": 1.075015,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 354.65,
+      "prompt_tokens": 304,
+      "completion_tokens": 23,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.4444444444444444,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.38, recall 0.55 (6 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.5714285714285714,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "4/7 reference terms found in context; missing: burst, hold, rise",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.9230769230769231,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "12/13 answer terms found in context; unsupported: causing",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately conveys the core mechanism described in the Expected Output: gas is trapped, pressure builds, and the volcano explodes. While the Actual Output adds specific details like 'Thick, sticky magma' and 'blows apart' versus 'bursts apart', these are consistent with the factual claim that pressure from trapped gas causes a violent eruption. There are no contradictions or hallucinations relative to the expected logic.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v11",
+      "position": 11,
+      "question": "Which gases do volcanoes give off?",
+      "expected_answer": "They release water vapour, carbon dioxide and sulfur dioxide.",
+      "status": "ok",
+      "metadata": {
+        "type": "list",
+        "difficulty": "medium",
+        "topic": "eruption products"
+      },
+      "answer": "Based on passage [3], volcanoes emit gases such as **water vapour, carbon dioxide, and sulfur dioxide**.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 2.501616,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b1",
+          "text": "Scientists try to forecast eruptions by watching for warning signs. Small earthquakes often increase as magma moves upward, the ground may swell as pressure builds, and the amount and type of gas escaping from vents can change. Combining several of these measurements gives a better warning than relying on any single one.",
+          "page": 2,
+          "score": 2.316331,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b7",
+          "text": "Eruptions release much more than lava. Ash is made of tiny fragments of rock and glass that can be carried far downwind and can damage aircraft engines. Pyroclastic flows are fast, hot avalanches of gas and volcanic debris that race down a volcano's slopes. Volcanoes also emit gases such as water vapour, carbon dioxide and sulfur dioxide.",
+          "page": 1,
+          "score": 2.232839,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 447.349,
+      "prompt_tokens": 310,
+      "completion_tokens": 25,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.56,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 0.44, recall 0.78 (7 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "6/6 reference terms found in context",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.7272727272727273,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "8/11 answer terms found in context; unsupported: 3, based, passage",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately identifies the three specific gases (water vapour, carbon dioxide, and sulfur dioxide) mentioned in the Expected Output. There are no contradictions, omissions, or hallucinations regarding the factual claims. The additional context about the source passage does not detract from the factual correctness.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v12",
+      "position": 12,
+      "question": "How tall is Olympus Mons?",
+      "expected_answer": "The PDF does not provide enough information to answer the question.",
+      "status": "ok",
+      "metadata": {
+        "type": "unanswerable",
+        "difficulty": "medium",
+        "topic": "other worlds"
+      },
+      "answer": "The PDF does not provide enough information to answer the question.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b4",
+          "text": "Volcanoes are not unique to Earth. Olympus Mons on Mars is a giant shield volcano and one of the largest known volcanoes in the solar system. Jupiter's moon Io is the most volcanically active body known, with eruptions that throw sulfur-rich material high above its surface.",
+          "page": 2,
+          "score": 4.907356,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b1",
+          "text": "Volcanoes: Windows into a Restless Planet",
+          "page": 1,
+          "score": 0.0,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 0.0,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 360.976,
+      "prompt_tokens": 243,
+      "completion_tokens": 13,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 1.00, recall 1.00 (9 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "reference answer is an abstention (unanswerable case)",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "answer abstained; nothing to ground",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output is identical to the Expected Output, correctly stating that the PDF does not provide enough information to answer the question. There are no contradictions, omissions, or hallucinations.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v13",
+      "position": 13,
+      "question": "Why is volcanic ash a hazard for aircraft?",
+      "expected_answer": "Its tiny pieces of rock and glass drift far downwind and can harm jet engines.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "eruption products"
+      },
+      "answer": "Volcanic ash is a hazard for aircraft because it can damage aircraft engines.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b7",
+          "text": "Eruptions release much more than lava. Ash is made of tiny fragments of rock and glass that can be carried far downwind and can damage aircraft engines. Pyroclastic flows are fast, hot avalanches of gas and volcanic debris that race down a volcano's slopes. Volcanoes also emit gases such as water vapour, carbon dioxide and sulfur dioxide.",
+          "page": 1,
+          "score": 4.841579,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 3.601868,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p2-b5",
+          "text": "People have long lived close to volcanoes despite the risks, drawn by the good soil and the beauty of the land. Communities near active volcanoes often prepare with hazard maps, warning systems and evacuation plans. Education also matters, because residents who know the warning signs and escape routes are far better protected when an eruption begins.",
+          "page": 2,
+          "score": 2.193545,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 424.664,
+      "prompt_tokens": 319,
+      "completion_tokens": 17,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.14814814814814814,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.17, recall 0.13 (2 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.6,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "6/10 reference terms found in context; missing: drift, harm, jet, piece",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "6/6 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.7,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output correctly identifies the core hazard (damage to aircraft engines) but omits specific details present in the Expected Output, such as the composition (rock and glass) and the behavior (drifting downwind). While not contradictory, it lacks the precision and completeness of the expected response.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v14",
+      "position": 14,
+      "question": "What does pahoehoe lava look like?",
+      "expected_answer": "It has a smooth surface that looks like rope.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "lava types"
+      },
+      "answer": "Pahoehoe lava has a smooth, ropy surface.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b8",
+          "text": "Lava itself comes in different textures. Pahoehoe lava has a smooth, ropy surface, while aa lava is rough and covered in jagged clinkers. Both words come from the Hawaiian language. When lava flows into the sea or erupts under water, it cools quickly and can form rounded blobs known as pillow lava.",
+          "page": 1,
+          "score": 4.076421,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b5",
+          "text": "Volcanoes come in several shapes. Shield volcanoes have broad, gentle slopes built from runny lava that spreads over long distances. Stratovolcanoes, also called composite volcanoes, are steep and cone-shaped, and are made of alternating layers of lava and ash. Cinder cones are small, steep hills formed from fragments of lava thrown into the air.",
+          "page": 1,
+          "score": 1.43809,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 1.33408,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 365.529,
+      "prompt_tokens": 320,
+      "completion_tokens": 14,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.42857142857142855,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.50, recall 0.38 (3 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.4,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "2/5 reference terms found in context; missing: like, look, rope",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "5/5 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately captures the key factual claim from the Expected Output regarding the smooth, rope-like surface of Pahoehoe lava. There are no contradictions, omissions, or hallucinations; the description 'smooth, ropy surface' is semantically equivalent to 'smooth surface that looks like rope'.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v15",
+      "position": 15,
+      "question": "How does pillow lava form?",
+      "expected_answer": "Lava that enters the sea or erupts underwater cools fast and forms rounded blobs.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "hard",
+        "topic": "lava types"
+      },
+      "answer": "Pillow lava forms when lava flows into the sea or erupts underwater, causing it to cool quickly and form rounded blobs.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b8",
+          "text": "Lava itself comes in different textures. Pahoehoe lava has a smooth, ropy surface, while aa lava is rough and covered in jagged clinkers. Both words come from the Hawaiian language. When lava flows into the sea or erupts under water, it cools quickly and can form rounded blobs known as pillow lava.",
+          "page": 1,
+          "score": 5.136179,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b5",
+          "text": "Volcanoes come in several shapes. Shield volcanoes have broad, gentle slopes built from runny lava that spreads over long distances. Stratovolcanoes, also called composite volcanoes, are steep and cone-shaped, and are made of alternating layers of lava and ash. Cinder cones are small, steep hills formed from fragments of lava thrown into the air.",
+          "page": 1,
+          "score": 1.43809,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 1.33408,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 726.236,
+      "prompt_tokens": 316,
+      "completion_tokens": 26,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.5454545454545455,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 0.45, recall 0.69 (9 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.7,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "7/10 reference terms found in context; missing: enter, fast, underwater",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.8333333333333334,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "10/12 answer terms found in context; unsupported: causing, underwater",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately reflects the core factual claims of the Expected Output regarding the cooling process and formation of rounded blobs when lava enters the sea or erupts underwater. It adds the specific term 'Pillow lava' which is factually correct and consistent with the description, without introducing contradictions or hallucinations.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v16",
+      "position": 16,
+      "question": "How is a caldera created?",
+      "expected_answer": "The volcano drains its magma chamber and the ground above falls in, leaving a large bowl-shaped hollow.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "calderas"
+      },
+      "answer": "A caldera is created when a volcano empties its magma chamber and the ground above collapses.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b9",
+          "text": "A caldera is a large bowl-shaped depression that forms when a volcano empties its magma chamber and the ground above collapses. Calderas can be many kilometres across, and some later fill with water to become lakes. Crater Lake in Oregon sits in a caldera that formed after a huge eruption of an old volcano.",
+          "page": 1,
+          "score": 3.959888,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 2.193545,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b1",
+          "text": "Volcanoes: Windows into a Restless Planet",
+          "page": 1,
+          "score": 0.0,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 440.686,
+      "prompt_tokens": 254,
+      "completion_tokens": 20,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.5185185185185186,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 0.54, recall 0.50 (7 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.6363636363636364,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "7/11 reference terms found in context; missing: drain, fall, hollow, leaving",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "8/8 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately conveys the core mechanism described in the Expected Output: the emptying of the magma chamber and the subsequent collapse of the ground. While the Expected Output specifies the result as a 'large bowl-shaped hollow' and the Actual Output identifies it as a 'caldera,' these are factually equivalent descriptions of the geological feature. There are no contradictions or hallucinations; the key factual claims align perfectly.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v17",
+      "position": 17,
+      "question": "Which lake in Oregon fills a caldera?",
+      "expected_answer": "Crater Lake.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "calderas"
+      },
+      "answer": "Crater Lake",
+      "contexts": [
+        {
+          "chunk_id": "p1-b9",
+          "text": "A caldera is a large bowl-shaped depression that forms when a volcano empties its magma chamber and the ground above collapses. Calderas can be many kilometres across, and some later fill with water to become lakes. Crater Lake in Oregon sits in a caldera that formed after a huge eruption of an old volcano.",
+          "page": 1,
+          "score": 11.609487,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b3",
+          "text": "Most volcanoes form near the edges of tectonic plates, the large slabs that make up Earth's outer shell. At subduction zones, one plate sinks beneath another and releases water that helps the rock above it melt. At spreading ridges, plates move apart and magma rises to fill the gap, which creates new crust on the ocean floor.",
+          "page": 1,
+          "score": 1.69768,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b1",
+          "text": "Volcanoes: Windows into a Restless Planet",
+          "page": 1,
+          "score": 0.0,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 1309.012,
+      "prompt_tokens": 260,
+      "completion_tokens": 4,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 1.00, recall 1.00 (2 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "2/2 reference terms found in context",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "2/2 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output 'Crater Lake' matches the core factual content of the Expected Output 'Crater Lake.' exactly. The only difference is the absence of a trailing period in the Actual Output, which does not constitute a factual error, contradiction, or hallucination. The key data point is accurately identified.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v18",
+      "position": 18,
+      "question": "How many active volcanoes are there on Earth today?",
+      "expected_answer": "The PDF does not provide enough information to answer the question.",
+      "status": "ok",
+      "metadata": {
+        "type": "unanswerable",
+        "difficulty": "medium",
+        "topic": "classification"
+      },
+      "answer": "The PDF does not provide enough information to answer the question.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b4",
+          "text": "Volcanoes are not unique to Earth. Olympus Mons on Mars is a giant shield volcano and one of the largest known volcanoes in the solar system. Jupiter's moon Io is the most volcanically active body known, with eruptions that throw sulfur-rich material high above its surface.",
+          "page": 2,
+          "score": 4.263532,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 3.913723,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b10",
+          "text": "Volcanologists classify volcanoes by how recently they have erupted. An active volcano has erupted in recent history or is showing signs of unrest. A dormant volcano is quiet at present but could erupt again, while an extinct volcano is not expected to erupt any more. These labels are not always certain, because some volcanoes have woken after very long periods of silence.",
+          "page": 1,
+          "score": 2.308423,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 317.011,
+      "prompt_tokens": 314,
+      "completion_tokens": 13,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 1.00, recall 1.00 (9 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "reference answer is an abstention (unanswerable case)",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "answer abstained; nothing to ground",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output is identical to the Expected Output, correctly stating that the PDF does not provide enough information to answer the question. There are no contradictions, omissions, or hallucinations.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v19",
+      "position": 19,
+      "question": "What categories do volcanologists use for how recently a volcano has erupted?",
+      "expected_answer": "Active, dormant and extinct.",
+      "status": "ok",
+      "metadata": {
+        "type": "list",
+        "difficulty": "medium",
+        "topic": "classification"
+      },
+      "answer": "Volcanologists classify volcanoes into three categories based on how recently they have erupted: active, dormant, and extinct.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b10",
+          "text": "Volcanologists classify volcanoes by how recently they have erupted. An active volcano has erupted in recent history or is showing signs of unrest. A dormant volcano is quiet at present but could erupt again, while an extinct volcano is not expected to erupt any more. These labels are not always certain, because some volcanoes have woken after very long periods of silence.",
+          "page": 1,
+          "score": 9.046873,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 2.9009,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b9",
+          "text": "A caldera is a large bowl-shaped depression that forms when a volcano empties its magma chamber and the ground above collapses. Calderas can be many kilometres across, and some later fill with water to become lakes. Crater Lake in Oregon sits in a caldera that formed after a huge eruption of an old volcano.",
+          "page": 1,
+          "score": 1.293002,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 653.925,
+      "prompt_tokens": 321,
+      "completion_tokens": 25,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.38095238095238093,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.24, recall 1.00 (4 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "3/3 reference terms found in context",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.7272727272727273,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "8/11 answer terms found in context; unsupported: based, category, three",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output correctly identifies the three categories (active, dormant, and extinct) specified in the Expected Output. It provides accurate factual context regarding the classification basis (recency of eruption) without introducing contradictions or hallucinations. The core information aligns perfectly with the expected data points.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v20",
+      "position": 20,
+      "question": "How many activity categories are used for classifying volcanoes?",
+      "expected_answer": "There are three of them.",
+      "status": "ok",
+      "metadata": {
+        "type": "numeric",
+        "difficulty": "easy",
+        "topic": "classification"
+      },
+      "answer": "The PDF does not provide enough information to answer the question.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 7.114418,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b9",
+          "text": "A caldera is a large bowl-shaped depression that forms when a volcano empties its magma chamber and the ground above collapses. Calderas can be many kilometres across, and some later fill with water to become lakes. Crater Lake in Oregon sits in a caldera that formed after a huge eruption of an old volcano.",
+          "page": 1,
+          "score": 1.86877,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b1",
+          "text": "Volcanoes: Windows into a Restless Planet",
+          "page": 1,
+          "score": 0.858521,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 366.387,
+      "prompt_tokens": 259,
+      "completion_tokens": 13,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.0,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "no shared tokens",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.0,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "0/1 reference terms found in context; missing: three",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "answer abstained; nothing to ground",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.0,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "The Actual Output claims the PDF lacks sufficient information, whereas the Expected Output provides a specific factual answer ('There are three of them'). This constitutes a direct contradiction and a failure to provide the correct data point, resulting in no alignment with the expected factual content.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v21",
+      "position": 21,
+      "question": "Why are the active, dormant and extinct labels not always certain?",
+      "expected_answer": "Some volcanoes have become active again after being silent for a very long time.",
+      "status": "ok",
+      "metadata": {
+        "type": "why",
+        "difficulty": "hard",
+        "topic": "classification"
+      },
+      "answer": "Because some volcanoes have woken after very long periods of silence.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b10",
+          "text": "Volcanologists classify volcanoes by how recently they have erupted. An active volcano has erupted in recent history or is showing signs of unrest. A dormant volcano is quiet at present but could erupt again, while an extinct volcano is not expected to erupt any more. These labels are not always certain, because some volcanoes have woken after very long periods of silence.",
+          "page": 1,
+          "score": 13.64157,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b4",
+          "text": "Volcanoes are not unique to Earth. Olympus Mons on Mars is a giant shield volcano and one of the largest known volcanoes in the solar system. Jupiter's moon Io is the most volcanically active body known, with eruptions that throw sulfur-rich material high above its surface.",
+          "page": 2,
+          "score": 1.575399,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p2-b5",
+          "text": "People have long lived close to volcanoes despite the risks, drawn by the good soil and the beauty of the land. Communities near active volcanoes often prepare with hazard maps, warning systems and evacuation plans. Education also matters, because residents who know the warning signs and escape routes are far better protected when an eruption begins.",
+          "page": 2,
+          "score": 1.408379,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 423.686,
+      "prompt_tokens": 313,
+      "completion_tokens": 15,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.4999999999999999,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.55, recall 0.46 (6 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.5,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "3/6 reference terms found in context; missing: become, silent, time",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "5/5 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output conveys the same core factual claim as the Expected Output: that volcanoes can become active after long periods of inactivity. While the phrasing differs ('woken' vs 'become active again', 'silence' vs 'silent'), there are no contradictions, omissions, or hallucinations. The meaning is preserved accurately.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v22",
+      "position": 22,
+      "question": "Which warning signs help scientists predict an eruption?",
+      "expected_answer": "More small earthquakes, a swelling ground surface and changes in the amount or kind of gas coming out.",
+      "status": "ok",
+      "metadata": {
+        "type": "list",
+        "difficulty": "medium",
+        "topic": "forecasting"
+      },
+      "answer": "Based on passage [1], the warning signs that help scientists predict an eruption include:\n*   An increase in small earthquakes as magma moves upward.\n*   The ground swelling as pressure builds.\n*   Changes in the amount and type of gas escaping from vents.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b1",
+          "text": "Scientists try to forecast eruptions by watching for warning signs. Small earthquakes often increase as magma moves upward, the ground may swell as pressure builds, and the amount and type of gas escaping from vents can change. Combining several of these measurements gives a better warning than relying on any single one.",
+          "page": 2,
+          "score": 7.155932,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b5",
+          "text": "People have long lived close to volcanoes despite the risks, drawn by the good soil and the beauty of the land. Communities near active volcanoes often prepare with hazard maps, warning systems and evacuation plans. Education also matters, because residents who know the warning signs and escape routes are far better protected when an eruption begins.",
+          "page": 2,
+          "score": 4.620488,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b3",
+          "text": "Most volcanoes form near the edges of tectonic plates, the large slabs that make up Earth's outer shell. At subduction zones, one plate sinks beneath another and releases water that helps the rock above it melt. At spreading ridges, plates move apart and magma rises to fill the gap, which creates new crust on the ocean floor.",
+          "page": 1,
+          "score": 2.164856,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 563.067,
+      "prompt_tokens": 309,
+      "completion_tokens": 56,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.392156862745098,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.29, recall 0.62 (10 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.6,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "6/10 reference terms found in context; missing: coming, kind, surface, swelling",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.7692307692307693,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "20/26 answer terms found in context; unsupported: 1, based, include, passage, predict, swelling",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately captures all three key factual claims present in the Expected Output: an increase in small earthquakes, ground swelling, and changes in gas emissions. It provides the same information with slightly more detail (e.g., mentioning magma movement and pressure), but there are no contradictions, omissions, or hallucinations relative to the core facts in the Expected Output.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v23",
+      "position": 23,
+      "question": "Why are the soils around old eruption sites good for growing crops?",
+      "expected_answer": "Broken-down ash and lava turn into rich, fertile soil.",
+      "status": "ok",
+      "metadata": {
+        "type": "why",
+        "difficulty": "medium",
+        "topic": "benefits",
+        "style": "paraphrase"
+      },
+      "answer": "The PDF does not provide enough information to answer the question.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b5",
+          "text": "People have long lived close to volcanoes despite the risks, drawn by the good soil and the beauty of the land. Communities near active volcanoes often prepare with hazard maps, warning systems and evacuation plans. Education also matters, because residents who know the warning signs and escape routes are far better protected when an eruption begins.",
+          "page": 2,
+          "score": 4.615849,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b9",
+          "text": "A caldera is a large bowl-shaped depression that forms when a volcano empties its magma chamber and the ground above collapses. Calderas can be many kilometres across, and some later fill with water to become lakes. Crater Lake in Oregon sits in a caldera that formed after a huge eruption of an old volcano.",
+          "page": 1,
+          "score": 3.145804,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 2.490598,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 493.236,
+      "prompt_tokens": 311,
+      "completion_tokens": 13,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.0,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "no shared tokens",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.42857142857142855,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "3/7 reference terms found in context; missing: broken, fertile, rich, turn",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "answer abstained; nothing to ground",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.0,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "The Actual Output fails to provide the factual information present in the Expected Output. Instead of stating that broken-down ash and lava turn into rich, fertile soil, it incorrectly claims the PDF does not provide enough information, resulting in a complete omission of the required answer.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v24",
+      "position": 24,
+      "question": "How hot is lava when it erupts from a volcano?",
+      "expected_answer": "The PDF does not provide enough information to answer the question.",
+      "status": "ok",
+      "metadata": {
+        "type": "unanswerable",
+        "difficulty": "easy",
+        "topic": "lava types"
+      },
+      "answer": "The PDF does not provide enough information to answer the question.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b10",
+          "text": "Volcanologists classify volcanoes by how recently they have erupted. An active volcano has erupted in recent history or is showing signs of unrest. A dormant volcano is quiet at present but could erupt again, while an extinct volcano is not expected to erupt any more. These labels are not always certain, because some volcanoes have woken after very long periods of silence.",
+          "page": 1,
+          "score": 4.211199,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b8",
+          "text": "Lava itself comes in different textures. Pahoehoe lava has a smooth, ropy surface, while aa lava is rough and covered in jagged clinkers. Both words come from the Hawaiian language. When lava flows into the sea or erupts under water, it cools quickly and can form rounded blobs known as pillow lava.",
+          "page": 1,
+          "score": 3.569462,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b7",
+          "text": "Eruptions release much more than lava. Ash is made of tiny fragments of rock and glass that can be carried far downwind and can damage aircraft engines. Pyroclastic flows are fast, hot avalanches of gas and volcanic debris that race down a volcano's slopes. Volcanoes also emit gases such as water vapour, carbon dioxide and sulfur dioxide.",
+          "page": 1,
+          "score": 3.119181,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 448.153,
+      "prompt_tokens": 332,
+      "completion_tokens": 13,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 1.00, recall 1.00 (9 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "reference answer is an abstention (unanswerable case)",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "answer abstained; nothing to ground",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output is identical to the Expected Output, correctly stating that the PDF does not provide enough information to answer the question. There are no contradictions, omissions, or hallucinations.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v25",
+      "position": 25,
+      "question": "What is hot rock near the surface used for?",
+      "expected_answer": "It provides geothermal energy for heating and for making electricity.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "benefits"
+      },
+      "answer": "Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 7.175333,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 3.164821,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b7",
+          "text": "Eruptions release much more than lava. Ash is made of tiny fragments of rock and glass that can be carried far downwind and can damage aircraft engines. Pyroclastic flows are fast, hot avalanches of gas and volcanic debris that race down a volcano's slopes. Volcanoes also emit gases such as water vapour, carbon dioxide and sulfur dioxide.",
+          "page": 1,
+          "score": 2.43012,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 457.688,
+      "prompt_tokens": 320,
+      "completion_tokens": 20,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.5384615384615384,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 0.44, recall 0.70 (7 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.6666666666666666,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "4/6 reference terms found in context; missing: making, provide",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "11/11 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.9,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately conveys the core factual claims of the Expected Output: that geothermal energy is used for heating and electricity generation. While it adds specific context ('Hot rock near the surface') not present in the Expected Output, this does not contradict the expected information and aligns with the general factual correctness required by the evaluation steps. There are no hallucinations or omissions of the key data points.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v26",
+      "position": 26,
+      "question": "How can a huge blast from a fire mountain temporarily lower global temperatures?",
+      "expected_answer": "Sulfur dioxide forms droplets in the upper air that bounce sunlight back to space.",
+      "status": "ok",
+      "metadata": {
+        "type": "why",
+        "difficulty": "hard",
+        "topic": "climate",
+        "style": "paraphrase"
+      },
+      "answer": "The PDF does not provide enough information to answer the question.",
+      "contexts": [
+        {
+          "chunk_id": "p1-b9",
+          "text": "A caldera is a large bowl-shaped depression that forms when a volcano empties its magma chamber and the ground above collapses. Calderas can be many kilometres across, and some later fill with water to become lakes. Crater Lake in Oregon sits in a caldera that formed after a huge eruption of an old volcano.",
+          "page": 1,
+          "score": 2.383027,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b1",
+          "text": "Volcanoes: Windows into a Restless Planet",
+          "page": 1,
+          "score": 0.0,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 0.0,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 438.228,
+      "prompt_tokens": 258,
+      "completion_tokens": 13,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.09090909090909093,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.11, recall 0.08 (1 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 0.1,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "1/10 reference terms found in context; missing: air, back, bounce, dioxide, droplet, space, sulfur, sunlight",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "answer abstained; nothing to ground",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.0,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "The Actual Output claims the PDF lacks sufficient information, whereas the Expected Output provides a specific factual statement about sulfur dioxide forming droplets that reflect sunlight. This represents a complete omission of the required information and a contradiction of the premise that the answer is available, resulting in no alignment with the expected factual content.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v27",
+      "position": 27,
+      "question": "How long can the cooling effect of a big eruption last?",
+      "expected_answer": "About a year or two, after which it fades.",
+      "status": "ok",
+      "metadata": {
+        "type": "numeric",
+        "difficulty": "medium",
+        "topic": "climate"
+      },
+      "answer": "The cooling effect can last for a year or two.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b3",
+          "text": "Large eruptions can influence the climate. When a powerful eruption sends sulfur dioxide high into the atmosphere, it forms tiny droplets that reflect sunlight back into space. This can cool the planet slightly for a year or two. The effect fades as the droplets gradually fall out of the air.",
+          "page": 2,
+          "score": 3.564064,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p2-b5",
+          "text": "People have long lived close to volcanoes despite the risks, drawn by the good soil and the beauty of the land. Communities near active volcanoes often prepare with hazard maps, warning systems and evacuation plans. Education also matters, because residents who know the warning signs and escape routes are far better protected when an eruption begins.",
+          "page": 2,
+          "score": 1.877619,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b10",
+          "text": "Volcanologists classify volcanoes by how recently they have erupted. An active volcano has erupted in recent history or is showing signs of unrest. A dormant volcano is quiet at present but could erupt again, while an extinct volcano is not expected to erupt any more. These labels are not always certain, because some volcanoes have woken after very long periods of silence.",
+          "page": 1,
+          "score": 1.295688,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 633.271,
+      "prompt_tokens": 313,
+      "completion_tokens": 12,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.375,
+          "threshold": 0.5,
+          "passed": false,
+          "reason": "precision 0.38, recall 0.38 (3 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "3/3 reference terms found in context",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 0.6,
+          "threshold": 0.7,
+          "passed": false,
+          "reason": "3/5 answer terms found in context; unsupported: cooling, last",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.9,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output accurately captures the core factual claim of the Expected Output regarding the duration ('a year or two'). While it omits the specific detail about the effect fading and uses slightly different phrasing ('can last' vs 'About... after which it fades'), there are no contradictions or hallucinations. The key data point is preserved and factually aligned.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v28",
+      "position": 28,
+      "question": "Which moon is the most volcanically active body known?",
+      "expected_answer": "Jupiter's moon Io.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "medium",
+        "topic": "other worlds"
+      },
+      "answer": "Jupiter's moon Io is the most volcanically active body known.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b4",
+          "text": "Volcanoes are not unique to Earth. Olympus Mons on Mars is a giant shield volcano and one of the largest known volcanoes in the solar system. Jupiter's moon Io is the most volcanically active body known, with eruptions that throw sulfur-rich material high above its surface.",
+          "page": 2,
+          "score": 10.795433,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b10",
+          "text": "Volcanologists classify volcanoes by how recently they have erupted. An active volcano has erupted in recent history or is showing signs of unrest. A dormant volcano is quiet at present but could erupt again, while an extinct volcano is not expected to erupt any more. These labels are not always certain, because some volcanoes have woken after very long periods of silence.",
+          "page": 1,
+          "score": 1.552386,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p2-b5",
+          "text": "People have long lived close to volcanoes despite the risks, drawn by the good soil and the beauty of the land. Communities near active volcanoes often prepare with hazard maps, warning systems and evacuation plans. Education also matters, because residents who know the warning signs and escape routes are far better protected when an eruption begins.",
+          "page": 2,
+          "score": 1.408379,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 653.599,
+      "prompt_tokens": 311,
+      "completion_tokens": 15,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.5,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 0.33, recall 1.00 (3 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "3/3 reference terms found in context",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "7/7 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 0.9,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output correctly identifies 'Jupiter's moon Io' as the core answer, which aligns with the Expected Output. While it adds extra context about volcanic activity, this does not contradict the expected fact and accurately supports the identification of Io.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v29",
+      "position": 29,
+      "question": "On which planet is the giant shield volcano Olympus Mons?",
+      "expected_answer": "It is on Mars.",
+      "status": "ok",
+      "metadata": {
+        "type": "factual",
+        "difficulty": "easy",
+        "topic": "other worlds"
+      },
+      "answer": "Olympus Mons is on Mars.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b4",
+          "text": "Volcanoes are not unique to Earth. Olympus Mons on Mars is a giant shield volcano and one of the largest known volcanoes in the solar system. Jupiter's moon Io is the most volcanically active body known, with eruptions that throw sulfur-rich material high above its surface.",
+          "page": 2,
+          "score": 10.218933,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b2",
+          "text": "A volcano is an opening in a planet's crust through which molten rock, ash and gases escape to the surface. The molten rock is called magma while it is underground and lava once it has erupted. Volcanoes build up over time as layers of cooled lava and fragments of rock pile up around the vent.",
+          "page": 1,
+          "score": 2.282453,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b1",
+          "text": "Volcanoes: Windows into a Restless Planet",
+          "page": 1,
+          "score": 2.089104,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 499.918,
+      "prompt_tokens": 248,
+      "completion_tokens": 9,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 0.6666666666666665,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 0.60, recall 0.75 (3 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "1/1 reference terms found in context",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "3/3 answer terms found in context",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output correctly identifies that Olympus Mons is on Mars, which aligns perfectly with the core factual claim in the Expected Output ('It is on Mars'). There are no contradictions, omissions, or hallucinations; the response is factually accurate and consistent with the expected information.",
+          "cost_usd": null
+        }
+      }
+    },
+    {
+      "case_id": "v30",
+      "position": 30,
+      "question": "What is the Volcanic Explosivity Index used for?",
+      "expected_answer": "The PDF does not provide enough information to answer the question.",
+      "status": "ok",
+      "metadata": {
+        "type": "unanswerable",
+        "difficulty": "hard",
+        "topic": "forecasting"
+      },
+      "answer": "The PDF does not provide enough information to answer the question.",
+      "contexts": [
+        {
+          "chunk_id": "p2-b2",
+          "text": "Volcanic activity has benefits as well as dangers. Weathered volcanic ash and lava often produce rich, fertile soils that farmers value. Hot rock near the surface supplies geothermal energy that is used for heating and for generating electricity. Volcanic activity also created many of the islands and much of the land that people live on today.",
+          "page": 2,
+          "score": 4.61992,
+          "rank": 1
+        },
+        {
+          "chunk_id": "p1-b7",
+          "text": "Eruptions release much more than lava. Ash is made of tiny fragments of rock and glass that can be carried far downwind and can damage aircraft engines. Pyroclastic flows are fast, hot avalanches of gas and volcanic debris that race down a volcano's slopes. Volcanoes also emit gases such as water vapour, carbon dioxide and sulfur dioxide.",
+          "page": 1,
+          "score": 1.427294,
+          "rank": 2
+        },
+        {
+          "chunk_id": "p1-b4",
+          "text": "Some volcanoes sit far from any plate boundary. These are usually linked to hotspots, long-lived plumes of unusually hot rock rising from deep inside the planet. As a plate drifts slowly over a hotspot, a chain of volcanic islands can form, with the youngest island sitting above the hotspot and the oldest ones carried farthest away. The Hawaiian Islands are a well-known example.",
+          "page": 1,
+          "score": 1.354527,
+          "rank": 3
+        }
+      ],
+      "context_source": "retriever",
+      "latency_ms": 1498.473,
+      "prompt_tokens": 335,
+      "completion_tokens": 13,
+      "cost_usd": null,
+      "attempts": 1,
+      "error": null,
+      "metrics": {
+        "token_f1": {
+          "name": "token_f1",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.5,
+          "passed": true,
+          "reason": "precision 1.00, recall 1.00 (9 shared tokens)",
+          "cost_usd": null
+        },
+        "context_recall": {
+          "name": "context_recall",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "reference answer is an abstention (unanswerable case)",
+          "cost_usd": null
+        },
+        "groundedness": {
+          "name": "groundedness",
+          "status": "skipped",
+          "score": null,
+          "threshold": 0.7,
+          "passed": null,
+          "reason": "answer abstained; nothing to ground",
+          "cost_usd": null
+        },
+        "correctness": {
+          "name": "correctness",
+          "status": "ok",
+          "score": 1.0,
+          "threshold": 0.7,
+          "passed": true,
+          "reason": "The Actual Output is identical to the Expected Output, correctly stating that the PDF does not provide enough information to answer the question. There are no contradictions, omissions, or hallucinations.",
+          "cost_usd": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+........................................................................ [ 19%]
+........................................................................ [ 38%]
+......................s.............s................................... [ 57%]
+........................................................................ [ 77%]
+........................................................................ [ 96%]
+..............                                                           [100%]Running teardown with pytest sessionfinish...
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.15-final-0 _______________
+
+Name                                    Stmts   Miss  Cover
+-----------------------------------------------------------
+src\rag_workbench\__init__.py               4      0   100%
+src\rag_workbench\__main__.py               3      3     0%
+src\rag_workbench\abstention.py           112      0   100%
+src\rag_workbench\aggregate.py             99      0   100%
+src\rag_workbench\archive.py               55      3    95%
+src\rag_workbench\calibration.py          148      1    99%
+src\rag_workbench\cli.py                  446     20    96%
+src\rag_workbench\config.py               128      3    98%
+src\rag_workbench\datasets.py             150      4    97%
+src\rag_workbench\demo.py                  15      0   100%
+src\rag_workbench\documents.py             90      2    98%
+src\rag_workbench\errors.py                48      2    96%
+src\rag_workbench\history.py               49      0   100%
+src\rag_workbench\judge_noise.py           75      2    97%
+src\rag_workbench\logging_setup.py         68      9    87%
+src\rag_workbench\maintenance.py          168     16    90%
+src\rag_workbench\metrics\__init__.py      33      0   100%
+src\rag_workbench\metrics\base.py          59      1    98%
+src\rag_workbench\metrics\judge.py         70      2    97%
+src\rag_workbench\metrics\lexical.py       64      2    97%
+src\rag_workbench\metrics\semantic.py      59      6    90%
+src\rag_workbench\models.py               147      5    97%
+src\rag_workbench\pipeline.py             112      7    94%
+src\rag_workbench\prompts.py                7      0   100%
+src\rag_workbench\providers.py             74      2    97%
+src\rag_workbench\ratelimit.py             31      0   100%
+src\rag_workbench\regression.py            63      0   100%
+src\rag_workbench\reporting.py            129      2    98%
+src\rag_workbench\retrieval.py            136      3    98%
+src\rag_workbench\runner.py               191      8    96%
+src\rag_workbench\services.py              56      2    96%
+src\rag_workbench\storage.py               97      0   100%
+src\rag_workbench\text.py                  39      0   100%
+src\rag_workbench\ui\__init__.py            0      0   100%
+src\rag_workbench\ui\auth.py              154      3    98%
+src\rag_workbench\ui\components.py         54      3    94%
+src\rag_workbench\ui\state.py              28      4    86%
+src\rag_workbench\users.py                114      3    97%
+-----------------------------------------------------------
+TOTAL                                    3375    118    97%
+Test tests/test_live.py::test_live_smoke_script_passes was skipped. Reason: 
+('C:\\Users\\omjee\\OneDrive\\Desktop\\PROJECTS\\RAG 
+Evaluation\\rag-evaluation-workbench\\tests\\test_live.py', 26, 'Skipped: set 
+RAGWB_LIVE_TESTS=1 and OPENAI_API_KEY to run paid live tests')
+Test 
+tests/test_local_retrieval.py::test_real_model_ranks_a_paraphrase_above_an_unre
+lated_sentence was skipped. Reason: 
+('C:\\Users\\omjee\\OneDrive\\Desktop\\PROJECTS\\RAG 
+Evaluation\\rag-evaluation-workbench\\tests\\test_local_retrieval.py', 105, 
+'Skipped: set RAGWB_MODEL_TESTS=1 (and install fastembed) to run tests with the
+real local model')
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_live.py:26: set RAGWB_LIVE_TESTS=1 and OPENAI_API_KEY to run paid live tests
+SKIPPED [1] tests\test_local_retrieval.py:105: set RAGWB_MODEL_TESTS=1 (and install fastembed) to run tests with the real local model
+372 passed, 2 skipped in 1863.13s (0:31:03)

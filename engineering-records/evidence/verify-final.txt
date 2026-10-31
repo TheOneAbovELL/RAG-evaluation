@@ -1,0 +1,7 @@
+[PASS] environment - Python 3.12.15
+[PASS] lockfile - Resolved 117 packages in 3ms
+[PASS] secrets - no key-shaped strings found
+[PASS] tests - 140 passed in 33.52s; coverage 96%
+[PASS] end-to-end - CLI workflow completed offline
+
+5/5 checks passed

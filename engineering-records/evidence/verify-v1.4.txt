@@ -1,0 +1,10 @@
+[PASS] environment - Python 3.12.15
+[PASS] lockfile - Resolved 152 packages in 1ms
+[PASS] secrets - no key-shaped strings found
+[PASS] static - clean (ruff, mypy)
+[PASS] tests - 416 passed, 2 skipped in 115.96s (0:01:55); coverage 96%
+[PASS] end-to-end - CLI workflow completed offline
+[PASS] audit - No known vulnerabilities found
+[PASS] wheel - 10/10 checks passed
+
+8/8 checks passed

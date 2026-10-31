@@ -1,0 +1,20 @@
+{"id": "q01", "question": "How many queens does a typical honeybee colony have?", "expected_answer": "A colony normally has a single queen."}
+{"id": "q02", "question": "Where are honeybees thought to have originated?", "expected_answer": "Honeybees are thought to have originated in Asia."}
+{"id": "q03", "question": "How many eggs can a queen lay in a day?", "expected_answer": "At the peak of the season a queen can lay up to about two thousand eggs a day."}
+{"id": "q04", "question": "What do unfertilised eggs develop into?", "expected_answer": "Unfertilised eggs develop into male drones."}
+{"id": "q05", "question": "What jobs do young worker bees do?", "expected_answer": "Young workers clean cells and feed the larvae."}
+{"id": "q06", "question": "How long does a worker bee live in summer?", "expected_answer": "In summer a worker lives for roughly five to six weeks."}
+{"id": "q07", "question": "What do forager bees collect?", "expected_answer": "Foragers collect nectar, pollen, water and plant resin."}
+{"id": "q08", "question": "What is the main role of drones?", "expected_answer": "Drones exist mainly to mate with queens from other colonies."}
+{"id": "q09", "question": "What happens to drones at the end of the season?", "expected_answer": "Workers often force the remaining drones out of the hive."}
+{"id": "q10", "question": "How do honeybees tell each other where food is?", "expected_answer": "They perform the waggle dance, whose angle shows the direction and whose duration shows the distance to the food."}
+{"id": "q11", "question": "What does the angle of the waggle run indicate?", "expected_answer": "The angle of the run from vertical shows the direction of the food relative to the sun."}
+{"id": "q12", "question": "How is nectar turned into honey?", "expected_answer": "Bees add enzymes to the nectar, fan their wings to evaporate water, and then seal the cells with wax."}
+{"id": "q13", "question": "Where does beeswax come from?", "expected_answer": "Beeswax is secreted by glands on the underside of young workers' abdomens."}
+{"id": "q14", "question": "Why do bees build hexagonal cells?", "expected_answer": "Hexagonal cells hold the most honey and brood while using the least wax."}
+{"id": "q15", "question": "What temperature do bees keep the brood nest at?", "expected_answer": "They keep it at about thirty-five degrees Celsius."}
+{"id": "q16", "question": "How do honeybees keep warm in cold weather?", "expected_answer": "They cluster together and shiver their flight muscles to produce heat."}
+{"id": "q17", "question": "How do honeybees cool the hive?", "expected_answer": "They spread water on the comb and fan their wings so that evaporation cools it."}
+{"id": "q18", "question": "How does a honeybee colony reproduce?", "expected_answer": "By swarming: the old queen leaves with about half of the workers to start a new colony."}
+{"id": "q19", "question": "How do scout bees choose a new nest site?", "expected_answer": "Scouts dance for the sites they have found until one site wins a clear majority."}
+{"id": "q20", "question": "What threats do honeybee colonies face?", "expected_answer": "Varroa mites and the viruses they spread, pesticides, poor nutrition and the stress of long-distance transport for pollination."}

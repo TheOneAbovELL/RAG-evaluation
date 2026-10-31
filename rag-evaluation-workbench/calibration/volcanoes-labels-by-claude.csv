@@ -1,0 +1,31 @@
+case_id,human_pass,note
+v01,pass,
+v02,pass,terse but correct
+v03,pass,
+v04,pass,
+v05,pass,omits why the older islands are elsewhere
+v06,pass,correct abstention (unanswerable)
+v07,pass,fuller than the reference and consistent with it
+v08,fail,lists activity categories (active/dormant/extinct) not the volcano types asked about (shield/strato/cinder)
+v09,pass,omits "travels far" but the core is right
+v10,pass,
+v11,pass,
+v12,pass,correct abstention (unanswerable)
+v13,pass,omits the downwind drift and rock/glass detail but the core is right
+v14,pass,
+v15,pass,
+v16,pass,omits the bowl-shaped hollow
+v17,pass,
+v18,pass,correct abstention (unanswerable)
+v19,pass,
+v20,fail,abstained although the text states three categories
+v21,pass,
+v22,pass,
+v23,fail,abstained although the text explains fertile soil from ash and lava
+v24,pass,correct abstention (unanswerable)
+v25,pass,
+v26,fail,abstained although the text explains sulfur dioxide droplets reflecting sunlight
+v27,pass,
+v28,pass,
+v29,pass,
+v30,pass,correct abstention (unanswerable)

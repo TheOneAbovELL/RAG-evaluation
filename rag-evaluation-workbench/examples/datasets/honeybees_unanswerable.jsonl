@@ -1,0 +1,6 @@
+{"id": "u1", "question": "How much honey does a colony produce in a year?", "expected_answer": "The PDF does not provide enough information to answer the question.", "metadata": {"type": "unanswerable"}}
+{"id": "u2", "question": "How far can a honeybee fly on a single foraging trip?", "expected_answer": "The PDF does not provide enough information to answer the question.", "metadata": {"type": "unanswerable"}}
+{"id": "u3", "question": "Which flowers produce the most nectar?", "expected_answer": "The PDF does not provide enough information to answer the question.", "metadata": {"type": "unanswerable"}}
+{"id": "u4", "question": "Exactly how many species of honeybee exist?", "expected_answer": "The PDF does not provide enough information to answer the question.", "metadata": {"type": "unanswerable"}}
+{"id": "a1", "question": "What does a queen store after her mating flight?", "expected_answer": "She stores sperm from many drones.", "metadata": {"type": "answerable"}}
+{"id": "a2", "question": "Which parasite threatens honeybee colonies?", "expected_answer": "The varroa mite.", "metadata": {"type": "answerable"}}
